@@ -1,8 +1,5 @@
 # Roadmap
 
-## Version 1.1.0
-- [ ] Put price in title
-
 ## Version 1.2.0
 - [ ] Allow scroll speed customization
 - [ ] Custom Emojis
