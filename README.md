@@ -10,6 +10,7 @@ Read the Roadmap to see what is going to happen and when. (*You can join in by m
 * adding ?symbol= to the URL with a valid stock changes the displayed stock.
     * If no stock is specified it returns to GME
     * If a non existing stock is specified the program does nothing (v. 1.0.0)
+* Dynamic stock updates in page title
 
 Semantic versioning is used.
 
