@@ -1,6 +1,9 @@
 # Stonk Ticker
 Made with the [Coding Garden](https://www.youtube.com/channel/UCLNgu_OupwoeESgtab33CCw) | [video](https://www.youtube.com/watch?v=flxxyHeBowI) 
 
+Read the Changelog to see what has happened.
+Read the Roadmap to see what is going to happen and when. (*You can join in by making a push request for the next version!*)
+
 ## Current functionalities:
 * Displays GME stock
 * Displays different color & emoji based off of the stock going up or down
@@ -8,12 +11,10 @@ Made with the [Coding Garden](https://www.youtube.com/channel/UCLNgu_OupwoeESgta
     * If no stock is specified it returns to GME
     * If a non existing stock is specified the program does nothing (v. 1.0.0)
 
-## ToDo list:
-- [ ] Add loading indicator
-- [ ] Allow multiple symbols
-- [ ] Allow scroll speed customization
-- [ ] Custom Emojis
-- [ ] Specify direction
-- [ ] Put price in title
-- [ ] Flash on big jump in price
-    - [ ] Specify jump size
+Semantic versioning is used.
+
+Download this project and run:
+`npm start`
+
+To build this project run:
+`npm run build`
