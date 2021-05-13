@@ -9,11 +9,11 @@ Made with the [Coding Garden](https://www.youtube.com/channel/UCLNgu_OupwoeESgta
     * If a non existing stock is specified the program does nothing (v. 1.0.0)
 
 ## ToDo list:
-[ ] Add loading indicator
-[ ] Allow multiple symbols
-[ ] Allow scroll speed customization
-[ ] Custom Emojis
-[ ] Specify direction
-[ ] Put price in title
-[ ] Flash on big jump in price
-    [ ] Specify jump size
+-[ ] Add loading indicator
+-[ ] Allow multiple symbols
+-[ ] Allow scroll speed customization
+-[ ] Custom Emojis
+-[ ] Specify direction
+-[ ] Put price in title
+-[ ] Flash on big jump in price
+    -[ ] Specify jump size
