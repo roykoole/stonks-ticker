@@ -1,9 +1,12 @@
 # Roadmap
 
+## Version 1.1.0
+- [x] Put price in title
+
 ## Version 1.2.0
-- [ ] Allow scroll speed customization
-- [ ] Custom Emojis
-- [ ] Specify direction
+- [x] Allow scroll speed customization
+- [x] Custom Emojis
+- [x] Specify direction
 
 ## Version 1.3.0
 - [ ] Flash on big jump in price
@@ -13,4 +16,7 @@
 - [ ] Add loading indicator
 
 ## Version 1.5.0
+- [ ] Check if stock exists
+
+## Version 2.0.0
 - [ ] Allow multiple symbols
