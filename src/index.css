@@ -31,7 +31,6 @@ body {
 .stonk{
   width:100%;
   position: absolute;
-  animation: scroll 20s infinite linear;
   left: 100%;
 }
 

@@ -1,4 +1,14 @@
-# Current Stonk Ticker Version v1.1.0
+# Current Stonk Ticker Version v1.2.0
+
+## v1.2.0 Added features:
+* Added functionality to allow for the speed parameter in the URL
+* Added functionality to allow for the direction parameter in the URL
+* Added functionality to allow for the upEmoji parameter in the URL
+* Added functionality to allow for the downEmoji parameter in the URL
+
+### Changes
+* Changed the way the animation is handled by css. 
+    * The animation is moved over to react to allow for customisation.
 
 ## v1.1.0 Added features:
 * The price now dynamically updates the title of the page.

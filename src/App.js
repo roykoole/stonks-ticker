@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import protobuf from "protobufjs";
 const { Buffer } = require("buffer/");
 
-const emojis = {
-  "": "",
-  up: "🚀",
-  down: "💩",
-};
+var emojis;
+
+const regexEmoji = new RegExp('(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])')
+const speed = new RegExp("^[0-9]+$");
+const flow = ["normal", "reverse", "alternate", "alternate-reverse"]
+
+var divStyle;
 
 function formatPrice(price) {
   return `$${price.toFixed(2)}`;
@@ -18,6 +20,42 @@ function App() {
   useEffect(() => {
     document.title = "Please wait...";
     const params = new URLSearchParams(window.location.search);
+    
+    divStyle = {
+      animation: 'scroll '+ (speed.test(params.get("speed")) ? params.get("speed") : "20") +'s infinite ' + (flow.includes(params.get("direction")) ?  params.get("direction") : "normal") +' linear'
+    };
+
+
+    if(params.get('upEmoji') && params.get('downEmoji') && regexEmoji.test(params.get('upEmoji')) && regexEmoji.test(params.get('downEmoji'))){
+      emojis = {
+        "":"",
+        up:params.get('upEmoji'),
+        down:params.get('downEmoji'),
+      }
+    }
+    else if(params.get('upEmoji') && regexEmoji.test(params.get('upEmoji'))){
+      emojis = {
+        "":"",
+        up:params.get('upEmoji'),
+        down:"💩",
+      }
+    }
+    else if(params.get('downEmoji') && regexEmoji.test(params.get('downEmoji'))){
+      emojis = {
+        "":"",
+        up:"🚀",
+        down:params.get('downEmoji'),
+      }
+    }
+    else{
+      emojis = {
+        "": "",
+        up: "🚀",
+        down: "💩",
+      };
+    }
+
+    console.log(emojis)
     const ws = new WebSocket("wss://streamer.finance.yahoo.com");
     protobuf.load("./YPricingData.proto", (error, root) => {
       const Yaticker = root.lookupType("yaticker");
@@ -56,7 +94,7 @@ function App() {
   }, []);
 
   return (
-    <div className="stonk">
+    <div className="stonk" style={divStyle}>
       {stonk && (
         <h2 className={direction}>
           {stonk.id} {formatPrice(stonk.price)} {emojis[direction]}
